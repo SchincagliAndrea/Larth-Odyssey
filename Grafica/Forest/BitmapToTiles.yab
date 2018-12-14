@@ -1,0 +1,462 @@
+open 1,"Forest.bin", "rb"
+open 2,"TilesForest.bin", "wb"
+
+rem 
+rem legge il primo blocco di tiles 2x2
+rem 
+numcolor = 0
+
+for tiles = 0 to 19 : rem numero di tiles per riga 20
+
+for x=0 to 15
+seek #1,x+(tiles*16)
+byte=peek(#1)
+poke #2,byte
+next x
+
+for x=0 to 15
+seek #1,x+(320+(tiles*16))
+byte=peek(#1)
+poke #2,byte
+next x
+
+seek #1,8000+numcolor
+byte=peek(#1):
+poke #2,byte
+byte=peek(#1)
+poke #2,byte
+
+seek #1,8040+numcolor
+byte=peek(#1)
+poke #2,byte
+byte=peek(#1)
+poke #2,byte
+
+seek #1,9000+numcolor
+byte=peek(#1)
+poke #2,byte
+byte=peek(#1)
+poke #2,byte
+
+seek #1,9040+numcolor
+byte=peek(#1)
+poke #2,byte
+byte=peek(#1)
+poke #2,byte
+ 
+numcolor = numcolor+2
+next tiles
+rem 
+rem legge il secondo blocco di tiles 2x2
+rem 
+numcolor = 0
+
+for tiles = 0 to 19 : rem numero di tiles per riga 20
+
+for x=0 to 15
+seek #1,x+(640+(tiles*16))
+byte=peek(#1)
+poke #2,byte
+next x
+
+for x=0 to 15
+seek #1,x+(960+(tiles*16))
+byte=peek(#1)
+poke #2,byte
+next x
+
+seek #1,8080+numcolor:byte=peek(#1)
+poke #2,byte
+seek #1,8081+numcolor:byte=peek(#1)
+poke #2,byte
+
+seek #1,8120+numcolor:byte=peek(#1)
+poke #2,byte
+seek #1,8121+numcolor:byte=peek(#1)
+poke #2,byte
+
+seek #1,9080+numcolor:byte=peek(#1)
+poke #2,byte
+seek #1,9081+numcolor:byte=peek(#1)
+poke #2,byte
+
+seek #1,9120+numcolor:byte=peek(#1)
+poke #2,byte
+seek #1,9121+numcolor:byte=peek(#1)
+poke #2,byte
+ 
+numcolor = numcolor+2
+next tiles
+
+rem 
+rem legge il terzo blocco di tiles 2x2
+rem 
+numcolor = 0
+
+for tiles = 0 to 19 : rem numero di tiles per riga 20
+
+for x=0 to 15
+seek #1,x+(1280+(tiles*16))
+byte=peek(#1)
+poke #2,byte
+next x
+
+for x=0 to 15
+seek #1,x+(1600+(tiles*16))
+byte=peek(#1)
+poke #2,byte
+next x
+
+seek #1,8160+numcolor
+byte=peek(#1)
+poke #2,byte
+byte=peek(#1)
+poke #2,byte
+
+seek #1,8200+numcolor
+byte=peek(#1)
+poke #2,byte
+byte=peek(#1)
+poke #2,byte
+
+seek #1,9160+numcolor
+byte=peek(#1)
+poke #2,byte
+byte=peek(#1)
+poke #2,byte
+
+seek #1,9200+numcolor
+byte=peek(#1)
+poke #2,byte
+byte=peek(#1)
+poke #2,byte
+ 
+numcolor = numcolor+2
+next tiles
+
+rem 
+rem legge il quarto blocco di tiles 2x2
+rem 
+numcolor = 0
+
+for tiles = 0 to 19 : rem numero di tiles per riga 20
+
+for x=0 to 15
+seek #1,x+(1920+(tiles*16))
+byte=peek(#1)
+poke #2,byte
+next x
+
+for x=0 to 15
+seek #1,x+(2240+(tiles*16))
+byte=peek(#1)
+poke #2,byte
+next x
+
+seek #1,8240+numcolor
+byte=peek(#1)
+poke #2,byte
+byte=peek(#1)
+poke #2,byte
+
+seek #1,8280+numcolor
+byte=peek(#1)
+poke #2,byte
+byte=peek(#1)
+poke #2,byte
+
+seek #1,9240+numcolor
+byte=peek(#1)
+poke #2,byte
+byte=peek(#1)
+poke #2,byte
+
+seek #1,9280+numcolor
+byte=peek(#1)
+poke #2,byte
+byte=peek(#1)
+poke #2,byte
+ 
+numcolor = numcolor+2
+next tiles
+
+rem 
+rem legge il quinto blocco di tiles 2x2
+rem 
+numcolor = 0
+
+for tiles = 0 to 19 : rem numero di tiles per riga 20
+
+for x=0 to 15
+seek #1,x+(2560+(tiles*16))
+byte=peek(#1)
+poke #2,byte
+next x
+
+for x=0 to 15
+seek #1,x+(2880+(tiles*16))
+byte=peek(#1)
+poke #2,byte
+next x
+
+seek #1,8320+numcolor
+byte=peek(#1)
+poke #2,byte
+byte=peek(#1)
+poke #2,byte
+
+seek #1,8360+numcolor
+byte=peek(#1)
+poke #2,byte
+byte=peek(#1)
+poke #2,byte
+
+seek #1,9320+numcolor
+byte=peek(#1)
+poke #2,byte
+byte=peek(#1)
+poke #2,byte
+
+seek #1,9360+numcolor
+byte=peek(#1)
+poke #2,byte
+byte=peek(#1)
+poke #2,byte
+ 
+numcolor = numcolor+2
+next tiles
+
+rem 
+rem legge il sesto blocco di tiles 2x2
+rem 
+numcolor = 0
+
+for tiles = 0 to 19 : rem numero di tiles per riga 20
+
+for x=0 to 15
+seek #1,x+(3200+(tiles*16))
+byte=peek(#1)
+poke #2,byte
+next x
+
+for x=0 to 15
+seek #1,x+(3520+(tiles*16))
+byte=peek(#1)
+poke #2,byte
+next x
+
+seek #1,8400+numcolor
+byte=peek(#1)
+poke #2,byte
+byte=peek(#1)
+poke #2,byte
+
+seek #1,8440+numcolor
+byte=peek(#1)
+poke #2,byte
+byte=peek(#1)
+poke #2,byte
+
+seek #1,9400+numcolor
+byte=peek(#1)
+poke #2,byte
+byte=peek(#1)
+poke #2,byte
+
+seek #1,9440+numcolor
+byte=peek(#1)
+poke #2,byte
+byte=peek(#1)
+poke #2,byte
+ 
+numcolor = numcolor+2
+next tiles
+
+rem 
+rem legge il settimo blocco di tiles 2x2
+rem 
+numcolor = 0
+
+for tiles = 0 to 19 : rem numero di tiles per riga 20
+
+for x=0 to 15
+seek #1,x+(3840+(tiles*16))
+byte=peek(#1)
+poke #2,byte
+next x
+
+for x=0 to 15
+seek #1,x+(4160+(tiles*16))
+byte=peek(#1)
+poke #2,byte
+next x
+
+seek #1,8480+numcolor
+byte=peek(#1)
+poke #2,byte
+byte=peek(#1)
+poke #2,byte
+
+seek #1,8520+numcolor
+byte=peek(#1)
+poke #2,byte
+byte=peek(#1)
+poke #2,byte
+
+seek #1,9480+numcolor
+byte=peek(#1)
+poke #2,byte
+byte=peek(#1)
+poke #2,byte
+
+seek #1,9520+numcolor
+byte=peek(#1)
+poke #2,byte
+byte=peek(#1)
+poke #2,byte
+ 
+numcolor = numcolor+2
+next tiles
+
+rem 
+rem legge il ottavo blocco di tiles 2x2
+rem 
+numcolor = 0
+
+for tiles = 0 to 19 : rem numero di tiles per riga 20
+
+for x=0 to 15
+seek #1,x+(4480+(tiles*16))
+byte=peek(#1)
+poke #2,byte
+next x
+
+for x=0 to 15
+seek #1,x+(4800+(tiles*16))
+byte=peek(#1)
+poke #2,byte
+next x
+
+seek #1,8560+numcolor
+byte=peek(#1)
+poke #2,byte
+byte=peek(#1)
+poke #2,byte
+
+seek #1,8600+numcolor
+byte=peek(#1)
+poke #2,byte
+byte=peek(#1)
+poke #2,byte
+
+seek #1,9560+numcolor
+byte=peek(#1)
+poke #2,byte
+byte=peek(#1)
+poke #2,byte
+
+seek #1,9600+numcolor
+byte=peek(#1)
+poke #2,byte
+byte=peek(#1)
+poke #2,byte
+ 
+numcolor = numcolor+2
+next tiles
+
+rem 
+rem legge il nono blocco di tiles 2x2
+rem 
+numcolor = 0
+
+for tiles = 0 to 19 : rem numero di tiles per riga 20
+
+for x=0 to 15
+seek #1,x+(5120+(tiles*16))
+byte=peek(#1)
+poke #2,byte
+next x
+
+for x=0 to 15
+seek #1,x+(5440+(tiles*16))
+byte=peek(#1)
+poke #2,byte
+next x
+
+seek #1,8640+numcolor
+byte=peek(#1)
+poke #2,byte
+byte=peek(#1)
+poke #2,byte
+
+seek #1,8680+numcolor
+byte=peek(#1)
+poke #2,byte
+byte=peek(#1)
+poke #2,byte
+
+seek #1,9640+numcolor
+byte=peek(#1)
+poke #2,byte
+byte=peek(#1)
+poke #2,byte
+
+seek #1,9680+numcolor
+byte=peek(#1)
+poke #2,byte
+byte=peek(#1)
+poke #2,byte
+ 
+numcolor = numcolor+2
+next tiles
+
+rem 
+rem legge il decimo blocco di tiles 2x2
+rem 
+numcolor = 0
+
+for tiles = 0 to 19 : rem numero di tiles per riga 20
+
+for x=0 to 15
+seek #1,x+(5760+(tiles*16))
+byte=peek(#1)
+poke #2,byte
+next x
+
+for x=0 to 15
+seek #1,x+(6080+(tiles*16))
+byte=peek(#1)
+poke #2,byte
+next x
+
+seek #1,8720+numcolor
+byte=peek(#1)
+poke #2,byte
+byte=peek(#1)
+poke #2,byte
+
+seek #1,8760+numcolor
+byte=peek(#1)
+poke #2,byte
+byte=peek(#1)
+poke #2,byte
+
+seek #1,9720+numcolor
+byte=peek(#1)
+poke #2,byte
+byte=peek(#1)
+poke #2,byte
+
+seek #1,9760+numcolor
+byte=peek(#1)
+poke #2,byte
+byte=peek(#1)
+poke #2,byte
+ 
+numcolor = numcolor+2
+next tiles
+
+
+
+close 2
+close 1
